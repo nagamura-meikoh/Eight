@@ -1,0 +1,242 @@
+@charset "utf-8";
+/*--------------------------------------
+
+アイキャッチ
+
+---------------------------------------*/
+#eye_catch {
+    margin-top: 144px;
+}
+#eye_catch .logo_box {
+    position: relative;
+    height: 100vh;
+    background:  #FEFBF7 url(../images/index/eye_catch.png) no-repeat center center;
+    background-size: contain;
+}
+#eye_catch .logo {
+    display: inline-block;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    /* width: 20%; */
+    transform: translate(-50%, -50%);
+}
+@media screen and (width <= 768px) {
+    #eye_catch {
+        margin-top: 40px;
+    }
+    #eye_catch .logo_box {
+        position: relative;
+        height: 100vh;
+        background:  #FEFBF7 url(../images/index/eye_catch_sp.png) no-repeat center center;
+        background-size: contain;
+    }
+}
+/*--------------------------------------
+
+コンセプト
+
+---------------------------------------*/
+#concept .content_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6%;
+    width: 100%;
+    max-width: 1344px;
+    margin: 240px auto 0px;
+    padding: 0px 32px;
+}
+#concept .content_wrapper .photo_box {
+    width: 100%;
+    max-width: 614px;
+}
+#concept .content_wrapper .text_box {
+    width: 100%;
+    max-width: 500px;
+}
+#concept .content_wrapper .text_box h3 {
+    font-size: 40px;
+    line-height: 58px;
+}
+#concept .content_wrapper .text_box p:nth-of-type(1) {
+    margin-top: 72px;
+}
+#concept .content_wrapper .text_box p:nth-of-type(2) {
+    margin-top: 56px;
+}
+@media screen and (width <= 768px) {
+    #concept .content_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6%;
+        width: 100%;
+        max-width: 1344px;
+        margin: 40px auto 0px;
+        padding: 0px 32px;
+    }
+    #concept .content_wrapper .text_box h3 {
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0.08em;
+    }
+    #concept .content_wrapper .text_box p {
+        font-size: 14px;
+        line-height: 28px;
+    }
+    #concept .content_wrapper .text_box p:nth-of-type(1) {
+        margin-top: 40px;
+    }
+    #concept .content_wrapper .text_box p:nth-of-type(2) {
+        margin-top: 32px;
+    }
+}
+/*--------------------------------------
+
+メニュー
+
+---------------------------------------*/
+#menu .content_wrapper {
+    width: 100%;
+    max-width: 1344px;
+    margin: 306px auto 0px;
+    text-align: center;
+}
+#menu .content_wrapper .content_box {
+    margin-top: 72px;
+}
+#menu .content_wrapper .content_box + .content_box {
+    margin-top: 160px;
+}
+#menu .content_wrapper .content_box .text_box {
+    margin-top: 48px;
+}
+#menu .content_wrapper .content_box .text_box h2 {
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 0.08em;
+}
+#menu .content_wrapper .content_box .text_box p {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 28px;
+}
+#menu .content_wrapper .bt {
+    display: inline-block;
+    position: relative;
+    margin-top: 72px;
+    padding: 1px 60px 9px 40px;
+    background: #4A99C2;
+    border-radius: 100px;
+}
+#menu .content_wrapper .bt span {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #FEFBF7;
+}
+#menu .content_wrapper .bt .arrow {
+    position: absolute;
+    top: 28%;
+    right: 16%;
+    width: 20px;
+}
+/*--------------------------------------
+
+ショップ
+
+---------------------------------------*/
+#shop {
+    text-align: center;
+    margin-top: 120px
+}
+#shop .top_box {
+    position: relative;
+    height: 100vh;
+    background: #FEFBF7 url(../images/index/shop.png) no-repeat center center;
+    background-size: contain;
+}
+#shop .top_box .title {
+    position: absolute;
+    top: 47%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+#shop .content_wrapper {
+    width: 100%;
+    max-width: 658px;
+    margin: 120px auto 40px;
+}
+#shop .content_wrapper .shop_info li {
+   display: flex;
+   padding: 32px 0px;
+   text-align: left;
+}
+#shop .content_wrapper .shop_info li + li {
+    border-top: 1px solid #D7E6EE;
+}
+#shop .content_wrapper .shop_info li h3 {
+    width: 32%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4A99C2;
+}
+#shop .content_wrapper .shop_info li p {
+    font-size: 16px;
+    line-height: 32px;
+}
+@media screen and (width <= 768px) {
+    #shop .top_box {
+        position: relative;
+        height: 100vh;
+        background: #FEFBF7 url(../images/index/shop_sp.png) no-repeat center center;
+        background-size: contain;
+    }
+    #shop .content_wrapper {
+        margin: 0 auto 40px;
+    }
+    #shop .content_wrapper .shop_info li {
+        padding: 32px 16px;
+    }
+}
+/*--------------------------------------
+
+フッター
+
+---------------------------------------*/
+footer {
+    text-align: center;
+    padding-bottom: 122px;
+}
+footer .content_wrapper {
+    position: relative;
+    margin: 200px auto 0px;
+    text-align: center;
+}
+footer .bg {
+    position: absolute;
+    bottom: 0%;
+    z-index: -1;
+    width: 100vw;
+    height: 178px;
+    background: #D7E6EE;
+}
+footer .content_wrapper .logo {
+    width: 100%;
+}
+footer .content_wrapper .footer_nav {
+    justify-content: center;
+}
+footer .content_wrapper .bt_arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    width: 100%;
+    max-width: 52px;
+}

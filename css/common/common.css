@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/*--------------------------------------
+
+共通
+
+---------------------------------------*/
+body {
+    position: relative;
+    width: 100%;
+    background: #FEFBF7;
+    color: #23201e;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 42px;
+    letter-spacing: 0.08em;
+}
+/* ヘッダー */
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 128px;
+    top: 0px;
+    background: #FEFBF7;
+}
+header + * {
+   margin-top: 144px;
+}
+header .content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 16px 0px;
+}
+header .content_wrapper .logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 171px;
+}
+/*コンテントラッパー*/
+.content_wrapper {
+    width: 100%;
+    max-width: 1344px;
+}
+/*テキスト*/
+h2.title {
+    font-family: 'Abril Fatface', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 99px;
+  }
+  h2.title.dis_none {
+    display: none;
+  }
+  h3.title {
+    color: #4A99C2;
+  }
+.content_wrapper .header_nav, .footer_nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 62px 0px 42px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+}
+.content_wrapper li img {
+    width:100%;
+    max-width: 28px;
+}
+@media screen and (width <= 768px) {
+    header {
+        height: 112px;
+        padding-top: 24px;
+    }
+    .content_wrapper .footer_nav {
+        padding: 62px 16px 42px;
+    }
+    /*ハンバーガー*/
+    .content_wrapper .header_nav {
+        display: none;
+        padding: 0;
+    }
+}
+/*リンク*/
+a {
+    transition: 0.2s;
+}
+a:hover {
+    opacity: 70%;
+}
+
+/*--------------------------------------
+
+スクリプト
+
+---------------------------------------*/
+/* PCでは非表示にしておく */
+.nav_toggle,.nav {
+  display: none;
+}
+/* スマホサイズで見た場合のスタイル */
+@media screen and (width <= 768px) {
+/* ハンバーガーのマーク */
+.nav_toggle {
+    display: block;
+    position: relative;
+    width: 1.75rem;
+    height: 1.5rem;
+    margin: 32px 24px 0 0;
+    z-index: 2Z;
+  }
+  .nav_toggle i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #4A99C2;
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  .nav_toggle i:nth-child(1) {
+    top: 0;
+  }
+  .nav_toggle i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .nav_toggle i:nth-child(3) {
+    bottom: 0;
+  }
+
+  /* クリックされた後のハンバーガーのマーク */
+  .nav_toggle.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  .nav_toggle.show i:nth-child(2) {
+    opacity: 0;
+  }
+  .nav_toggle.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+  }
+
+  /* クリックで表示されるメニュー：クリックされる前 */
+ header .nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    z-index: 1;
+    top :80px;
+    left: 300px;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(255, 255, 255, .5);
+    color: #23201e;
+  }
+  header .nav_menu_li {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+  }
+  /* クリックで表示されるメニュー：クリックされた後 */
+  header .nav.show {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    visibility: visible;
+    opacity: 0.9;
+    background: #FEFBF7;
+    animation: TopUp .3s ease-out 0s forwards;
+  }
+  header .nav_menu_li li {
+    border-bottom: 1px solid #23201e;
+    text-decoration: none;
+  }
+  .nav_menu_li li a {
+    display: block;
+    padding: 40px 0 40px 24px;
+  }
+}
+@keyframes TopUp {
+    from {
+        top: 100vh;
+    }
+    to {
+        top: 100px;
+    }
+}
